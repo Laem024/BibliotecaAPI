@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\middlewares\\accesorestringidomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\middlewares\\accesorestringidomiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\migrations\\20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\migrations\\20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\middlewares\\logueapeticionesmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\middlewares\\logueapeticionesmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\controllers\\autorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|c:\\users\\laem0\\desktop\\cursos\\udemy\\c#\\bibliotecaapi\\bibliotecaapi\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51C28057-BDC8-4231-A33F-13B758CEA089}|BibliotecaAPI\\BibliotecaAPI.csproj|solutionrelative:bibliotecaapi\\entidades\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccesoRestringidoMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Middlewares\\AccesoRestringidoMiddleware.cs",
-              "RelativeDocumentMoniker": "BibliotecaAPI\\Middlewares\\AccesoRestringidoMiddleware.cs",
-              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Middlewares\\AccesoRestringidoMiddleware.cs",
-              "RelativeToolTip": "BibliotecaAPI\\Middlewares\\AccesoRestringidoMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs",
+              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Migrations\\20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs",
+              "RelativeDocumentMoniker": "BibliotecaAPI\\Migrations\\20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs",
+              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Migrations\\20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs",
+              "RelativeToolTip": "BibliotecaAPI\\Migrations\\20250401174859_configuracion_logitud_columnas_en_libros_y_autores.cs",
+              "ViewState": "AgIAAAoAAACAmZmZmfkzwAwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T18:11:02.615Z",
+              "WhenOpened": "2025-04-01T17:49:00.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LogueaPeticionesMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Middlewares\\LogueaPeticionesMiddleware.cs",
-              "RelativeDocumentMoniker": "BibliotecaAPI\\Middlewares\\LogueaPeticionesMiddleware.cs",
-              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Middlewares\\LogueaPeticionesMiddleware.cs",
-              "RelativeToolTip": "BibliotecaAPI\\Middlewares\\LogueaPeticionesMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Title": "Libro.cs",
+              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Entidades\\Libro.cs",
+              "RelativeDocumentMoniker": "BibliotecaAPI\\Entidades\\Libro.cs",
+              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Entidades\\Libro.cs",
+              "RelativeToolTip": "BibliotecaAPI\\Entidades\\Libro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T17:59:48.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Program.cs",
-              "RelativeDocumentMoniker": "BibliotecaAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Program.cs",
-              "RelativeToolTip": "BibliotecaAPI\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T17:43:01.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "BibliotecaAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\appsettings.Development.json",
-              "RelativeToolTip": "BibliotecaAPI\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-27T17:22:07.222Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AutoresController.cs",
-              "DocumentMoniker": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Controllers\\AutoresController.cs",
-              "RelativeDocumentMoniker": "BibliotecaAPI\\Controllers\\AutoresController.cs",
-              "ToolTip": "C:\\Users\\Laem0\\Desktop\\Cursos\\Udemy\\C#\\BibliotecaAPI\\BibliotecaAPI\\Controllers\\AutoresController.cs",
-              "RelativeToolTip": "BibliotecaAPI\\Controllers\\AutoresController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T19:19:56.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T22:58:48.025Z"
             }
           ]
         }

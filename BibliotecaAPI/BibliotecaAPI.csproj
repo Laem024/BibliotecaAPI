@@ -14,4 +14,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
+    <Folder Include="Repositorios\" />
+  </ItemGroup>
+
 </Project>
