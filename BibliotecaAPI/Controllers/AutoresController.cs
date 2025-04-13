@@ -1,5 +1,8 @@
-﻿using BibliotecaAPI.Datos;
+﻿using AutoMapper;
+using BibliotecaAPI.Datos;
+using BibliotecaAPI.DTOs;
 using BibliotecaAPI.Entidades;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,14 +13,16 @@ namespace BibliotecaAPI.Controllers
     public class AutoresController: ControllerBase
     {
         private readonly ApplicationDBContext context;
+        private readonly IMapper mapper;
 
-        public AutoresController(ApplicationDBContext context)
+        public AutoresController(ApplicationDBContext context, IMapper mapper)
         {
             this.context = context;
+            this.mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Autor>> Get()
+        public async Task<IEnumerable<AutorDTO>> Get()
         {
             //return new List<Autor>
             //{
@@ -25,11 +30,21 @@ namespace BibliotecaAPI.Controllers
             //    new Autor{Id = 1, Nombre= "Franz Kafka"}
             //};
 
-            return await context.Autores.ToListAsync();
+            var autores = await context.Autores.ToListAsync();
+            //var autoresDTO = autores.Select(autor => 
+            //    new AutorDTO 
+            //    { 
+            //        Id = autor.Id, 
+            //        Full_Nombre = $"{autor.Nombres} {autor.Apellidos}" 
+            //    });
+
+            var autoresDTO = mapper.Map<IEnumerable<AutorDTO>>(autores);
+
+            return autoresDTO;
         }
 
-        [HttpGet("{id:int}")] // api/autores/id
-        public async Task<ActionResult<Autor>> GetByID(int id)
+        [HttpGet("{id:int}", Name = "ObtenerAutor")] // api/autores/id
+        public async Task<ActionResult<AutorConLibrosDTO>> GetByID(int id)
         {
             var autor = await context.Autores
                 .Include(l => l.Libros)
@@ -40,24 +55,31 @@ namespace BibliotecaAPI.Controllers
                 return NotFound();
             }
 
-            return Ok(autor);
+            var autorDTO = mapper.Map<AutorConLibrosDTO>(autor);
+
+            return Ok(autorDTO);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post(Autor autor)
+        public async Task<ActionResult> Post(AutorCreacionDTO autorCreacionDTO)
         {
+
+            var autor = mapper.Map<Autor>(autorCreacionDTO);
+
             context.Add(autor);
             await context.SaveChangesAsync();
-            return Ok(autor);
+
+            var autorDTO = mapper.Map<AutorDTO>(autor);
+
+            return CreatedAtRoute("ObtenerAutor", new {autor.Id}, autorDTO);
         }
 
         [HttpPut("{id:int}")] // api/autores/id
-        public async Task<ActionResult> Put(int id, Autor autor)
+        public async Task<ActionResult> Put(int id, AutorCreacionDTO autorCreacionDTO)
         {
-            if (id != autor.Id) 
-            {
-                return BadRequest("Los IDs deben de coincidir");
-            }
+            var autor = mapper.Map<Autor>(autorCreacionDTO);
+
+            autor.Id = id;
 
             var autorPorActualizar = await context.Autores.FirstOrDefaultAsync(a => a.Id == id);
 
@@ -70,7 +92,41 @@ namespace BibliotecaAPI.Controllers
 
             context.Update(autor);
             await context.SaveChangesAsync();
-            return Ok(autor);
+            return NoContent();
+        }
+
+        [HttpPatch("{id:int}")]
+        public async Task<ActionResult> Patch(int id, JsonPatchDocument<AutorPatchDTO> patchDoc)
+        {
+            if (patchDoc is null)
+            {
+                return BadRequest();
+            }
+
+            var autorDB = await context.Autores.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (autorDB is null)
+            {
+                return NotFound();
+            }
+
+            var autorPatchDTO = mapper.Map<AutorPatchDTO>(autorDB);
+
+            patchDoc.ApplyTo(autorPatchDTO, ModelState);
+
+            var esValido = TryValidateModel(autorPatchDTO);
+
+            if (!esValido)
+            {
+                return ValidationProblem();
+            }
+
+            mapper.Map(autorPatchDTO, autorDB);
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+
         }
 
         [HttpDelete("{id:int}")]
@@ -83,7 +139,7 @@ namespace BibliotecaAPI.Controllers
                 return NotFound();
             }
 
-            return Ok();
+            return NoContent();
         }
     }
 }

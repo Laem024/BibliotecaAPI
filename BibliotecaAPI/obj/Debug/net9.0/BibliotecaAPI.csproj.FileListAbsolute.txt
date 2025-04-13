@@ -159,3 +159,9 @@ C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\bin\Debug\net
 C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\obj\Debug\net9.0\BibliotecaAPI.csproj.AssemblyReference.cache
 C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\obj\Debug\net9.0\Bibliote.E70DFC73.Up2Date
 C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\obj\Debug\net9.0\BibliotecaAPI.sourcelink.json
+C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\Laem0\Desktop\Cursos\Udemy\C#\BibliotecaAPI\BibliotecaAPI\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll

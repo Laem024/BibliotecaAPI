@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.Entidades.Autor, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.DTOs.AutorDTO, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,8 +28,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "autor",
-        "Type": "BibliotecaAPI.Entidades.Autor",
+        "Name": "autorCreacionDTO",
+        "Type": "BibliotecaAPI.DTOs.AutorCreacionDTO",
         "IsRequired": true
       }
     ],
@@ -47,16 +47,11 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      },
-      {
-        "Name": "incluirLibros",
-        "Type": "System.Boolean",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "BibliotecaAPI.Entidades.Autor",
+        "Type": "BibliotecaAPI.DTOs.AutorConLibrosDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -64,7 +59,8 @@
         ],
         "StatusCode": 200
       }
-    ]
+    ],
+    "EndpointName": "ObtenerAutor"
   },
   {
     "ContainingType": "BibliotecaAPI.Controllers.AutoresController",
@@ -80,8 +76,29 @@
         "IsRequired": true
       },
       {
-        "Name": "autor",
-        "Type": "BibliotecaAPI.Entidades.Autor",
+        "Name": "autorCreacionDTO",
+        "Type": "BibliotecaAPI.DTOs.AutorCreacionDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaAPI.Controllers.AutoresController",
+    "Method": "Patch",
+    "RelativePath": "api/autores/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "patchDoc",
+        "Type": "Microsoft.AspNetCore.JsonPatch.Operations.Operation[]",
         "IsRequired": true
       }
     ],
@@ -104,73 +121,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "BibliotecaAPI.Controllers.AutoresController",
-    "Method": "GetNombre",
-    "RelativePath": "api/autores/{nombre}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "nombre",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.Entidades.Autor, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BibliotecaAPI.Controllers.AutoresController",
-    "Method": "GetDosParametros",
-    "RelativePath": "api/autores/{parametro1}/{parametro2}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "parametro1",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "parametro2",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BibliotecaAPI.Controllers.AutoresController",
-    "Method": "GetPrimerAutor",
-    "RelativePath": "api/autores/primero",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "BibliotecaAPI.Entidades.Autor",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "BibliotecaAPI.Controllers.LibrosController",
     "Method": "Get",
     "RelativePath": "api/libros",
@@ -180,7 +130,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.Entidades.Libro, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.DTOs.LibroDTO, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -199,8 +149,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "libro",
-        "Type": "BibliotecaAPI.Entidades.Libro",
+        "Name": "libroCreacionDTO",
+        "Type": "BibliotecaAPI.DTOs.LibroCreacionDTO",
         "IsRequired": true
       }
     ],
@@ -222,7 +172,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "BibliotecaAPI.Entidades.Libro",
+        "Type": "BibliotecaAPI.DTOs.LibroConAutorDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -230,7 +180,8 @@
         ],
         "StatusCode": 200
       }
-    ]
+    ],
+    "EndpointName": "ObtenerLibro"
   },
   {
     "ContainingType": "BibliotecaAPI.Controllers.LibrosController",
@@ -246,8 +197,8 @@
         "IsRequired": true
       },
       {
-        "Name": "libro",
-        "Type": "BibliotecaAPI.Entidades.Libro",
+        "Name": "libroCreacionDTO",
+        "Type": "BibliotecaAPI.DTOs.LibroCreacionDTO",
         "IsRequired": true
       }
     ],
@@ -268,55 +219,5 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BibliotecaAPI.Controllers.ValoresController",
-    "Method": "Get",
-    "RelativePath": "api/valores",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.Entidades.Valor, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "BibliotecaAPI.Controllers.ValoresController",
-    "Method": "GetServicioTiempoDeVida",
-    "RelativePath": "api/valores/tiempo-de-vida",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "BibliotecaAPI.Controllers.AutoresController",
-    "Method": "Get",
-    "RelativePath": "listado-de-autores",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaAPI.Entidades.Autor, BibliotecaAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

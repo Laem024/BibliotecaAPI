@@ -7,8 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Inicio del area de servicios
 
-builder.Services.AddControllers().AddJsonOptions(opciones => 
-    opciones.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+builder.Services.AddAutoMapper(typeof(Program));
+
+//builder.Services.AddControllers().AddJsonOptions(opciones => 
+//    opciones.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+builder.Services.AddControllers().AddNewtonsoftJson();
 
 builder.Services.AddDbContext<ApplicationDBContext>(opciones => 
     opciones.UseSqlServer("name=DefaultConnection"));

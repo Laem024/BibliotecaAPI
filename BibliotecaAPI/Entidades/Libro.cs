@@ -25,6 +25,8 @@ namespace BibliotecaAPI.Entidades
         public required int AutorId {  get; set; }
 
         public Autor? Autor { get; set; }
+
+        public List<Comentario> Comentarios { get; set; } = new List<Comentario>();
         
     }
 }
